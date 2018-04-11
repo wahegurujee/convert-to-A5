@@ -1,0 +1,23 @@
+.pull-down{
+    margin-bottom: 30px;
+}
+.change-col{
+    color: white;
+}
+.one {
+    width: 150px;
+    margin-bottom: 10px;
+}
+.but{
+    margin-bottom: 50px;
+}
+.drop_first{
+    width: 150px;
+    margin-bottom: 10px;  
+}
+.drop_second{
+    position: relative;
+    right: 30px;
+}
+
+/* You can add global styles to this file, and also import other style files */

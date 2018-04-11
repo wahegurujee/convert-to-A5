@@ -1,0 +1,175 @@
+<div class="container">
+  <div class="row but">
+    <div class="col-lg-3 col-md-3 col sm-6">
+      <h4>Destination 1</h4>
+      <div *ngIf="selectedName1 === 'Donlon'">
+        <img class="drop_first" [src]='donlon' />
+      </div>
+      <div *ngIf="selectedName1 === 'Enchai'">
+        <img class="drop_first" [src]='enchai' />
+      </div>
+      <div *ngIf="selectedName1 === 'Jebing'">
+        <img class="drop_first" [src]='jebing' />
+      </div>
+      <div *ngIf="selectedName1 === 'Sapir'">
+        <img class="drop_first" [src]='sapir' />
+      </div>
+      <div *ngIf="selectedName1 === 'Lerbin'">
+        <img class="drop_first" [src]='lerbin' />
+      </div>
+      <div *ngIf="selectedName1 === 'Pingasor'">
+        <img class="drop_first" [src]='pingasor' />
+      </div>
+      <select class="one" [(ngModel)]="selectedName1">
+        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 1)" value="{{item.name}}" (click)="dropData(0)">{{item.name}}</option>
+      </select>
+      <br/>
+      <div *ngIf="selectedName1">
+        <div *ngFor="let rb of box1">
+          <input [value]='rb.name' type="radio" name="radios" [disabled]="optionDisable(rb.total_no)" 
+          (click)="captureValue(rb.total_no)" [(ngModel)]="radioSelected1"> {{rb.name}} ({{rb.total_no}})
+        </div>
+        <div *ngIf="radioSelected1 === 'Space Pod'">
+          <img class="drop_second" [src]='pod' />
+        </div>
+        <div *ngIf="radioSelected1 === 'Space Rocket'">
+          <img class="drop_second" [src]='rocket' />
+        </div>
+        <div *ngIf="radioSelected1 === 'Space Shuttle'">
+          <img class="drop_second" [src]='shuttle' />
+        </div>
+        <div *ngIf="radioSelected1 === 'Space Ship'">
+          <img class="drop_second" [src]='ship' />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col sm-6">
+      <h4>Destination 2</h4>
+      <div *ngIf="selectedName2 === 'Donlon'">
+        <img class="drop_first" [src]='donlon' />
+      </div>
+      <div *ngIf="selectedName2 === 'Enchai'">
+        <img class="drop_first" [src]='enchai' />
+      </div>
+      <div *ngIf="selectedName2 === 'Jebing'">
+        <img class="drop_first" [src]='jebing' />
+      </div>
+      <div *ngIf="selectedName2 === 'Sapir'">
+        <img class="drop_first" [src]='sapir' />
+      </div>
+      <div *ngIf="selectedName2 === 'Lerbin'">
+        <img class="drop_first" [src]='lerbin' />
+      </div>
+      <div *ngIf="selectedName2 === 'Pingasor'">
+        <img class="drop_first" [src]='pingasor' />
+      </div>
+      <select class="one" [(ngModel)]="selectedName2">
+        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 2)" value="{{item.name}}" (click)="dropData(1)">{{item.name}}</option>
+      </select>
+      <br/>
+      <div *ngIf="selectedName2">
+        <div *ngFor="let rb of box1">
+          <input [value]='rb.name' type="radio" name="radio2" [disabled]="optionDisable(rb.total_no)" 
+          (click)="captureValue(rb.total_no)" [(ngModel)]="radioSelected2"> {{rb.name}} ({{rb.total_no}})
+        </div>
+        <div *ngIf="radioSelected2 === 'Space Pod'">
+          <img class="drop_second" [src]='pod' />
+        </div>
+        <div *ngIf="radioSelected2 === 'Space Rocket'">
+          <img class="drop_second" [src]='rocket' />
+        </div>
+        <div *ngIf="radioSelected2 === 'Space Shuttle'">
+          <img class="drop_second" [src]='shuttle' />
+        </div>
+        <div *ngIf="radioSelected2 === 'Space Ship'">
+          <img class="drop_second" [src]='ship' />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col sm-6">
+      <h4>Destination 3</h4>
+      <div *ngIf="selectedName3 === 'Donlon'">
+        <img class="drop_first" [src]='donlon' />
+      </div>
+      <div *ngIf="selectedName3 === 'Enchai'">
+        <img class="drop_first" [src]='enchai' />
+      </div>
+      <div *ngIf="selectedName3 === 'Jebing'">
+        <img class="drop_first" [src]='jebing' />
+      </div>
+      <div *ngIf="selectedName3 === 'Sapir'">
+        <img class="drop_first" [src]='sapir' />
+      </div>
+      <div *ngIf="selectedName3 === 'Lerbin'">
+        <img class="drop_first" [src]='lerbin' />
+      </div>
+      <div *ngIf="selectedName3 === 'Pingasor'">
+        <img class="drop_first" [src]='pingasor' />
+      </div>
+      <select class="one" [(ngModel)]="selectedName3">
+        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 3)" value="{{item.name}}" (click)="dropData(2)">{{item.name}}</option>
+      </select>
+      <br/>
+      <div *ngIf="selectedName3">
+        <div *ngFor="let rb of box1">
+          <input [value]='rb.name' type="radio" name="radio3" [disabled]="optionDisable(rb.total_no)" 
+          (click)="captureValue(rb.total_no)" [(ngModel)]="radioSelected3"> {{rb.name}} ({{rb.total_no}})
+        </div>
+        <div *ngIf="radioSelected3 === 'Space Pod'">
+          <img class="drop_second" [src]='pod' />
+        </div>
+        <div *ngIf="radioSelected3 === 'Space Rocket'">
+          <img class="drop_second" [src]='rocket' />
+        </div>
+        <div *ngIf="radioSelected3 === 'Space Shuttle'">
+          <img class="drop_second" [src]='shuttle' />
+        </div>
+        <div *ngIf="radioSelected3 === 'Space Ship'">
+          <img class="drop_second" [src]='ship' />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col sm-6">
+      <h4>Destination 4</h4>
+      <div *ngIf="selectedName4 === 'Donlon'">
+        <img class="drop_first" [src]='donlon' />
+      </div>
+      <div *ngIf="selectedName4 === 'Enchai'">
+        <img class="drop_first" [src]='enchai' />
+      </div>
+      <div *ngIf="selectedName4 === 'Jebing'">
+        <img class="drop_first" [src]='jebing' />
+      </div>
+      <div *ngIf="selectedName4 === 'Sapir'">
+        <img class="drop_first" [src]='sapir' />
+      </div>
+      <div *ngIf="selectedName4 === 'Lerbin'">
+        <img class="drop_first" [src]='lerbin' />
+      </div>
+      <div *ngIf="selectedName4 === 'Pingasor'">
+        <img class="drop_first" [src]='pingasor' />
+      </div>
+      <select class="one" [(ngModel)]="selectedName4">
+        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 4)" value="{{item.name}}" (click)="dropData(3)">{{item.name}}</option>
+      </select>
+      <br/>
+      <div *ngIf="selectedName4">
+        <div *ngFor="let rb of box1">
+          <input [value]='rb.name' type="radio" name="radio4" [disabled]="optionDisable(rb.total_no)" (click)="captureValue()" [(ngModel)]="radioSelected4"> {{rb.name}} ({{rb.total_no}})
+        </div>
+        <div *ngIf="radioSelected4 === 'Space Pod'">
+          <img class="drop_second" [src]='pod' />
+        </div>
+        <div *ngIf="radioSelected4 === 'Space Rocket'">
+          <img class="drop_second" [src]='rocket' />
+        </div>
+        <div *ngIf="radioSelected4 === 'Space Shuttle'">
+          <img class="drop_second" [src]='shuttle' />
+        </div>
+        <div *ngIf="radioSelected4 === 'Space Ship'">
+          <img class="drop_second" [src]='ship' />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

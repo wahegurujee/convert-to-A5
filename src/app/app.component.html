@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark pull-down">
+  <a class="navbar-brand" routerLink="">
+    <img src="assets/images/logo.jpg" alt="Geek-logo" style="width:150px; height:50px;"/>
+  </a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a routerLink="Result" class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="find()">Find Falcone</a>
+    </form>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <form class="form-inline my-2 my-lg-0">
+      <a routerLink="GamePage" class="btn btn-outline-danger my-2 my-sm-0" type="button" (click)="reset()">Reset</a>
+    </form>
+  </div>
+</nav>
+<router-outlet></router-outlet>
