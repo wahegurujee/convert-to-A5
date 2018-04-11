@@ -10,6 +10,7 @@ export class GamePageComponent implements OnInit {
   dropdown: any;
   box1: any;
   //val:number;
+ 
   donlon: any;
   enchai: any;
   jebing: any;
@@ -41,8 +42,11 @@ export class GamePageComponent implements OnInit {
     this.ship = '/assets/images/ship.PNG';
     this.shuttle = '/assets/images/shuttle.PNG';
   }
+
+
   ngOnInit() {
    this.dropData();
+
    
   }
   checkDisability = function(item, flag) {
@@ -61,39 +65,54 @@ export class GamePageComponent implements OnInit {
     }
 
   };
-  captureValue = function(obj) {
-  	return obj = obj-1;
+
+
+
+  captureValue = function(val, flags) { 
+    this.box1.find((obj) => {
+      if(this.request.vehicle_names[flags] && this.request.vehicle_names[flags] !== val){
+          obj.total_no = obj.name === this.request.vehicle_names[flags] ? obj.total_no+1 : obj.total_no;
+      }
+      obj.total_no = obj.name === val ? obj.total_no-1 : obj.total_no;
+  });
+  this.request.vehicle_names[flags] = val; 
+  console.log(this.request);
   }
+
+
+
   optionDisable = function(count){
         return count === 0 ? true : false;
     };
 
 
-    dropData = function(val) {
+
+    dropData() {
       const url = 'https://findfalcone.herokuapp.com/planets';
       this.http.get(url).subscribe(res =>
         this.dropdown = res.json()
       );
-      console.log(val);
-      if(val === 0){
-        console.log("in 1st")
-        this.request.planet_names[val] = this.selectedName1;
-      }
-      else if(val === 1){
-        console.log("in 2st")
-        this.request.planet_names[val] = this.selectedName2;
-      }
-      else if(val === 2){
-        this.request.planet_names[val] = this.selectedName3;
-      }
-      else if(val === 3){
-        this.request.planet_names[val] = this.selectedName4;
-      }
-      console.log(this.request);
+      // console.log(val);
+      // if(val === 0){
+      //   console.log("in 1st")
+      //   this.request.planet_names[val] = this.selectedName1;
+      // }
+      // else if(val === 1){
+      //   console.log("in 2st")
+      //   this.request.planet_names[val] = this.selectedName2;
+      // }
+      // else if(val === 2){
+      //   this.request.planet_names[val] = this.selectedName3;
+      // }
+      // else if(val === 3){
+      //   this.request.planet_names[val] = this.selectedName4;
+      // }
+      // console.log(this.request);
 
       const urll = 'https://findfalcone.herokuapp.com/vehicles';
       this.http.get(urll).subscribe(res =>
         this.box1 = res.json()
       );
     }
+
 }
