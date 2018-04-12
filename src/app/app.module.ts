@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here.
+import { FormsModule } from '@angular/forms'; 
 import { AppRoutingModule } from './app-routing.module';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { GamePageComponent } from './game-page/game-page.component';
@@ -21,7 +21,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

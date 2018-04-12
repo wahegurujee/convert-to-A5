@@ -20,12 +20,12 @@
       <div *ngIf="selectedName1 === 'Pingasor'">
         <img class="drop_first" [src]='pingasor' />
       </div>
-      <select class="one" [(ngModel)]="selectedName1">
-        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 1)" value="{{item.name}}" (click)="dropData()">{{item.name}}</option>
+      <select class="one" [(ngModel)]="selectedName1" (change)="dropData(0)">
+        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 1)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
       <div *ngIf="selectedName1">
-        <div *ngFor="let rb of box1">
+        <div *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radios" [disabled]="optionDisable(rb.total_no)" 
           (click)="captureValue(rb.name, 0)" [(ngModel)]="radioSelected1"> {{rb.name}} ({{rb.total_no}})
         </div>
@@ -63,12 +63,12 @@
       <div *ngIf="selectedName2 === 'Pingasor'">
         <img class="drop_first" [src]='pingasor' />
       </div>
-      <select class="one" [(ngModel)]="selectedName2">
-        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 2)" value="{{item.name}}" (click)="dropData()">{{item.name}}</option>
+      <select class="one" [(ngModel)]="selectedName2" (change)="dropData(1)">
+        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 2)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
       <div *ngIf="selectedName2">
-        <div *ngFor="let rb of box1">
+        <div *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radio2" [disabled]="optionDisable(rb.total_no)" 
           (click)="captureValue(rb.name, 1)" [(ngModel)]="radioSelected2"> {{rb.name}} ({{rb.total_no}})
         </div>
@@ -106,12 +106,12 @@
       <div *ngIf="selectedName3 === 'Pingasor'">
         <img class="drop_first" [src]='pingasor' />
       </div>
-      <select class="one" [(ngModel)]="selectedName3">
-        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 3)" value="{{item.name}}" (click)="dropData()">{{item.name}}</option>
+      <select class="one" [(ngModel)]="selectedName3" (change)="dropData(2)">
+        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 3)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
       <div *ngIf="selectedName3">
-        <div *ngFor="let rb of box1">
+        <div *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radio3" [disabled]="optionDisable(rb.total_no)" 
           (click)="captureValue(rb.name, 2)" [(ngModel)]="radioSelected3"> {{rb.name}} ({{rb.total_no}})
         </div>
@@ -149,12 +149,12 @@
       <div *ngIf="selectedName4 === 'Pingasor'">
         <img class="drop_first" [src]='pingasor' />
       </div>
-      <select class="one" [(ngModel)]="selectedName4">
-        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 4)" value="{{item.name}}" (click)="dropData()">{{item.name}}</option>
+      <select class="one" [(ngModel)]="selectedName4" (change)="dropData(3)">
+        <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 4)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
       <div *ngIf="selectedName4">
-        <div *ngFor="let rb of box1">
+        <div *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radio4" [disabled]="optionDisable(rb.total_no)"
           (click)="captureValue(rb.name, 3)" [(ngModel)]="radioSelected4"> {{rb.name}} ({{rb.total_no}})
         </div>

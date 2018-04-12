@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
+import { GamePageService } from '../game-page/game-page.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-game-page',
   templateUrl: './game-page.component.html',
-  styleUrls: ['./game-page.component.css']
+  styleUrls: ['./game-page.component.css'],
+  providers: [GamePageService]
 })
 export class GamePageComponent implements OnInit {
   dropdown: any;
-  box1: any;
+  vehicle: [any];
   //val:number;
+  token:any;
  
   donlon: any;
   enchai: any;
@@ -29,8 +33,9 @@ export class GamePageComponent implements OnInit {
     planet_names:[],
     vehicle_names:[]
   }
+  
  
-  constructor(private http: Http) {
+  constructor(private gamepageService: GamePageService) {
     this.donlon = '/assets/images/donlon.PNG';
     this.enchai = '/assets/images/enchai.PNG';
     this.jebing = '/assets/images/jebing.PNG';
@@ -45,8 +50,7 @@ export class GamePageComponent implements OnInit {
 
 
   ngOnInit() {
-   this.dropData();
-
+   this.dropData(0);
    
   }
   checkDisability = function(item, flag) {
@@ -69,7 +73,7 @@ export class GamePageComponent implements OnInit {
 
 
   captureValue = function(val, flags) { 
-    this.box1.find((obj) => {
+    this.vehicle.find((obj) => {
       if(this.request.vehicle_names[flags] && this.request.vehicle_names[flags] !== val){
           obj.total_no = obj.name === this.request.vehicle_names[flags] ? obj.total_no+1 : obj.total_no;
       }
@@ -85,34 +89,42 @@ export class GamePageComponent implements OnInit {
         return count === 0 ? true : false;
     };
 
+   vehicles =  this.gamepageService.getvehicleData().then(res => {
+      this.vehicle = res;
+    }, err => {
+
+    });
 
 
-    dropData() {
-      const url = 'https://findfalcone.herokuapp.com/planets';
-      this.http.get(url).subscribe(res =>
-        this.dropdown = res.json()
-      );
-      // console.log(val);
-      // if(val === 0){
-      //   console.log("in 1st")
-      //   this.request.planet_names[val] = this.selectedName1;
-      // }
-      // else if(val === 1){
-      //   console.log("in 2st")
-      //   this.request.planet_names[val] = this.selectedName2;
-      // }
-      // else if(val === 2){
-      //   this.request.planet_names[val] = this.selectedName3;
-      // }
-      // else if(val === 3){
-      //   this.request.planet_names[val] = this.selectedName4;
-      // }
-      // console.log(this.request);
+    GetToken = this.gamepageService.getToken().then(res => {
+      this.token = res;
+      console.log(this.token);
+    }, err => {
+      
+    });
 
-      const urll = 'https://findfalcone.herokuapp.com/vehicles';
-      this.http.get(urll).subscribe(res =>
-        this.box1 = res.json()
-      );
+    dropData(val) {
+  
+      this.gamepageService.getdropData().then(res => {
+        this.dropdown = res;
+      }, err => {
+
+      });
+      if(val === 0){
+        this.request.planet_names[val] = this.selectedName1;
+      }
+      else if(val === 1){
+        this.request.planet_names[val] = this.selectedName2;
+      }
+      else if(val === 2){
+        this.request.planet_names[val] = this.selectedName3;
+      }
+      else if(val === 3){
+        this.request.planet_names[val] = this.selectedName4;
+      }
+    
     }
+
+
 
 }
