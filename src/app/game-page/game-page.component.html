@@ -27,20 +27,9 @@
       <div *ngIf="selectedName1">
         <div *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radios" [disabled]="optionDisable(rb.total_no)" 
-          (click)="captureValue(rb.name, 0)" [(ngModel)]="radioSelected1"> {{rb.name}} ({{rb.total_no}})
+          (click)="captureValue(rb.name, 0, 6)" [(ngModel)]="radioSelected1"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <div *ngIf="radioSelected1 === 'Space Pod'">
-          <img class="drop_second" [src]='pod' />
-        </div>
-        <div *ngIf="radioSelected1 === 'Space Rocket'">
-          <img class="drop_second" [src]='rocket' />
-        </div>
-        <div *ngIf="radioSelected1 === 'Space Shuttle'">
-          <img class="drop_second" [src]='shuttle' />
-        </div>
-        <div *ngIf="radioSelected1 === 'Space Ship'">
-          <img class="drop_second" [src]='ship' />
-        </div>
+        <img [src]="image6[0].src">
       </div>
     </div>
     <div class="col-lg-3 col-md-3 col sm-6">
@@ -70,20 +59,10 @@
       <div *ngIf="selectedName2">
         <div *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radio2" [disabled]="optionDisable(rb.total_no)" 
-          (click)="captureValue(rb.name, 1)" [(ngModel)]="radioSelected2"> {{rb.name}} ({{rb.total_no}})
+          (click)="captureValue(rb.name, 1, 7)" [(ngModel)]="radioSelected2"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <div *ngIf="radioSelected2 === 'Space Pod'">
-          <img class="drop_second" [src]='pod' />
-        </div>
-        <div *ngIf="radioSelected2 === 'Space Rocket'">
-          <img class="drop_second" [src]='rocket' />
-        </div>
-        <div *ngIf="radioSelected2 === 'Space Shuttle'">
-          <img class="drop_second" [src]='shuttle' />
-        </div>
-        <div *ngIf="radioSelected2 === 'Space Ship'">
-          <img class="drop_second" [src]='ship' />
-        </div>
+        <img [src]="image7[0].src">
+   
       </div>
     </div>
     <div class="col-lg-3 col-md-3 col sm-6">
@@ -113,20 +92,10 @@
       <div *ngIf="selectedName3">
         <div *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radio3" [disabled]="optionDisable(rb.total_no)" 
-          (click)="captureValue(rb.name, 2)" [(ngModel)]="radioSelected3"> {{rb.name}} ({{rb.total_no}})
+          (click)="captureValue(rb.name, 2, 8)" [(ngModel)]="radioSelected3"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <div *ngIf="radioSelected3 === 'Space Pod'">
-          <img class="drop_second" [src]='pod' />
-        </div>
-        <div *ngIf="radioSelected3 === 'Space Rocket'">
-          <img class="drop_second" [src]='rocket' />
-        </div>
-        <div *ngIf="radioSelected3 === 'Space Shuttle'">
-          <img class="drop_second" [src]='shuttle' />
-        </div>
-        <div *ngIf="radioSelected3 === 'Space Ship'">
-          <img class="drop_second" [src]='ship' />
-        </div>
+        <img [src]="image8[0].src">
+      
       </div>
     </div>
     <div class="col-lg-3 col-md-3 col sm-6">
@@ -156,20 +125,10 @@
       <div *ngIf="selectedName4">
         <div *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radio4" [disabled]="optionDisable(rb.total_no)"
-          (click)="captureValue(rb.name, 3)" [(ngModel)]="radioSelected4"> {{rb.name}} ({{rb.total_no}})
+          (click)="captureValue(rb.name, 3, 9)" [(ngModel)]="radioSelected4"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <div *ngIf="radioSelected4 === 'Space Pod'">
-          <img class="drop_second" [src]='pod' />
-        </div>
-        <div *ngIf="radioSelected4 === 'Space Rocket'">
-          <img class="drop_second" [src]='rocket' />
-        </div>
-        <div *ngIf="radioSelected4 === 'Space Shuttle'">
-          <img class="drop_second" [src]='shuttle' />
-        </div>
-        <div *ngIf="radioSelected4 === 'Space Ship'">
-          <img class="drop_second" [src]='ship' />
-        </div>
+        <img [src]="image9[0].src">
+     
       </div>
     </div>
   </div>

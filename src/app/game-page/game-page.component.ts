@@ -72,7 +72,7 @@ export class GamePageComponent implements OnInit {
 
 
 
-  captureValue = function(val, flags) { 
+  captureValue = function(val, flags, dif) { 
     this.vehicle.find((obj) => {
       if(this.request.vehicle_names[flags] && this.request.vehicle_names[flags] !== val){
           obj.total_no = obj.name === this.request.vehicle_names[flags] ? obj.total_no+1 : obj.total_no;
@@ -81,7 +81,121 @@ export class GamePageComponent implements OnInit {
   });
   this.request.vehicle_names[flags] = val; 
   console.log(this.request);
+
+  if(dif === 6)
+  {
+  if(this.request.vehicle_names[flags] === 'Space pod')
+  {
+    this.image6 = [{
+      src: 'assets/images/pod.PNG',
+    }];
   }
+  else if(this.request.vehicle_names[flags] === 'Space rocket')
+  {
+      this.image6 = [{
+          src: 'assets/images/rocket.PNG',
+      }]; 
+  }
+  else if(this.request.vehicle_names[flags] === 'Space shuttle')
+  {
+      this.image6 = [{
+          src: 'assets/images/shuttle.PNG',
+      }]; 
+  }
+  else if(this.request.vehicle_names[flags] === 'Space ship')
+  {
+      this.image6 = [{
+          src: 'assets/images/ship.PNG',
+      }]; 
+  }
+  }
+
+  if(dif === 7)
+  {
+  if(this.request.vehicle_names[flags] === 'Space pod')
+  {
+    this.image7 = [{
+      src: 'assets/images/pod.PNG',
+    }];
+  }
+  else if(this.request.vehicle_names[flags] === 'Space rocket')
+  {
+      this.image7 = [{
+          src: 'assets/images/rocket.PNG',
+      }]; 
+  }
+  else if(this.request.vehicle_names[flags] === 'Space shuttle')
+  {
+      this.image7 = [{
+          src: 'assets/images/shuttle.PNG',
+      }]; 
+  }
+  else if(this.request.vehicle_names[flags] === 'Space ship')
+  {
+      this.image7 = [{
+          src: 'assets/images/ship.PNG',
+      }]; 
+  }
+  }
+
+  if(dif === 8)
+  {
+  if(this.request.vehicle_names[flags] === 'Space pod')
+  {
+    this.image8 = [{
+      src: 'assets/images/pod.PNG',
+    }];
+  }
+  else if(this.request.vehicle_names[flags] === 'Space rocket')
+  {
+      this.image8 = [{
+          src: 'assets/images/rocket.PNG',
+      }]; 
+  }
+  else if(this.request.vehicle_names[flags] === 'Space shuttle')
+  {
+      this.image8 = [{
+          src: 'assets/images/shuttle.PNG',
+      }]; 
+  }
+  else if(this.request.vehicle_names[flags] === 'Space ship')
+  {
+      this.image8 = [{
+          src: 'assets/images/ship.PNG',
+      }]; 
+  }
+  }
+
+  if(dif === 9)
+  {
+  if(this.request.vehicle_names[flags] === 'Space pod')
+  {
+    this.image9 = [{
+      src: 'assets/images/pod.PNG',
+    }];
+  }
+  else if(this.request.vehicle_names[flags] === 'Space rocket')
+  {
+      this.image9 = [{
+          src: 'assets/images/rocket.PNG',
+      }]; 
+  }
+  else if(this.request.vehicle_names[flags] === 'Space shuttle')
+  {
+      this.image9 = [{
+          src: 'assets/images/shuttle.PNG',
+      }]; 
+  }
+  else if(this.request.vehicle_names[flags] === 'Space ship')
+  {
+      this.image9 = [{
+          src: 'assets/images/ship.PNG',
+      }]; 
+  }
+  }
+
+
+}
 
 
 
@@ -98,7 +212,7 @@ export class GamePageComponent implements OnInit {
 
     GetToken = this.gamepageService.getToken().then(res => {
       this.token = res;
-      console.log(this.token);
+     // console.log(this.token);
     }, err => {
       
     });
