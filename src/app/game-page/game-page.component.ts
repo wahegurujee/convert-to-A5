@@ -42,10 +42,6 @@ export class GamePageComponent implements OnInit {
     this.sapir = '/assets/images/sapir.PNG';
     this.lerbin = '/assets/images/lerbin.PNG';
     this.pingasor = '/assets/images/pingasor.PNG';
-    this.pod = '/assets/images/pod.PNG';
-    this.rocket = '/assets/images/rocket.PNG';
-    this.ship = '/assets/images/ship.PNG';
-    this.shuttle = '/assets/images/shuttle.PNG';
   }
 
 
