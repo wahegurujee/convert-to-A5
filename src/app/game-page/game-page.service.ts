@@ -51,7 +51,6 @@ public httpOption = {
   getToken(): Promise<any> {
     return new Promise((resolve: any, reject: any) => {
       this.http.post(this.tokenURL, {}, this.httpOptions).subscribe( response => {
-        console.log(response);
         resolve(response);
       }, error => {
         reject(error);
@@ -60,31 +59,6 @@ public httpOption = {
   }
 
 
-  getResult(): Promise<any> {
-    return new Promise((resolve: any, reject: any) => {
-      this.http.post(this.resultURL, {
-        "token": "CbHoSGDzlOJbwBlFcRfIIggNCUHQhttU",
-        "planet_names": [
-                "Donlon",
-                "Enchai",
-                "Sapir",
-                "Lerbin"
-                ],
-        "vehicle_names": [
-                "Space pod",
-                "Space rocket",
-                "Space shuttle",
-                "Space pod"
-                ]
-             
-      }, this.httpOption).subscribe( response => {
-        console.log(response);
-        resolve(response);
-      }, error => {
-        reject(error);
-      });
-    });    
-  }
 
 
 }
