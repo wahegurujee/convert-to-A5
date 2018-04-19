@@ -18,7 +18,7 @@ export class AppService {
   getResult(): Promise<any> {
     return new Promise((resolve: any, reject: any) => {
       this.http.post(this.resultURL, { 
-        "token": "pnDvHLFyYYBBFlXoVjQLpdeiGrCbQTfW",
+        "token": "VFzoZTBhPhVLCRucBYnOixHfQGQCBHdJ",
         "planet_names": [
                 "Donlon",
                 "Enchai",
