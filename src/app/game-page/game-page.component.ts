@@ -21,7 +21,7 @@ export class GamePageComponent implements OnInit {
   image8:any = [];
   image9:any = [];
   token:any = {};
-  srcc:any;
+  srcc:any = [];
 
  
   donlon: any;
@@ -92,27 +92,27 @@ export class GamePageComponent implements OnInit {
   {
   if(this.request.vehicle_names[flags] === 'Space pod')
   {
-    this.image6 = [{
-      srcc: 'assets/images/pod.PNG',
-    }];
+    this.image6 = [
+       'assets/images/pod.PNG',
+    ];
   }
   else if(this.request.vehicle_names[flags] === 'Space rocket')
   {
-      this.image6 = [{
-          srcc: 'assets/images/rocket.PNG',
-      }]; 
+      this.image6 = [
+          'assets/images/rocket.PNG',
+      ]; 
   }
   else if(this.request.vehicle_names[flags] === 'Space shuttle')
   {
-      this.image6 = [{
-          srcc: 'assets/images/shuttle.PNG',
-      }]; 
+      this.image6 = [
+           'assets/images/shuttle.PNG',
+      ]; 
   }
   else if(this.request.vehicle_names[flags] === 'Space ship')
   {
-      this.image6 = [{
-          srcc: 'assets/images/ship.PNG',
-      }]; 
+      this.image6 = [
+          'assets/images/ship.PNG',
+      ]; 
   }
   }
 
@@ -120,27 +120,27 @@ export class GamePageComponent implements OnInit {
   {
   if(this.request.vehicle_names[flags] === 'Space pod')
   {
-    this.image7 = [{
-      srcc: 'assets/images/pod.PNG',
-    }];
+    this.image7 = [
+      'assets/images/pod.PNG',
+    ];
   }
   else if(this.request.vehicle_names[flags] === 'Space rocket')
   {
-      this.image7 = [{
-          srcc: 'assets/images/rocket.PNG',
-      }]; 
+      this.image7 = [
+           'assets/images/rocket.PNG',
+      ]; 
   }
   else if(this.request.vehicle_names[flags] === 'Space shuttle')
   {
-      this.image7 = [{
-          srcc: 'assets/images/shuttle.PNG',
-      }]; 
+      this.image7 = [
+           'assets/images/shuttle.PNG',
+      ]; 
   }
   else if(this.request.vehicle_names[flags] === 'Space ship')
   {
-      this.image7 = [{
-          srcc: 'assets/images/ship.PNG',
-      }]; 
+      this.image7 = [
+          'assets/images/ship.PNG',
+      ]; 
   }
   }
 
@@ -148,27 +148,27 @@ export class GamePageComponent implements OnInit {
   {
   if(this.request.vehicle_names[flags] === 'Space pod')
   {
-    this.image8 = [{
-      srcc: 'assets/images/pod.PNG',
-    }];
+    this.image8 = [
+       'assets/images/pod.PNG',
+    ];
   }
   else if(this.request.vehicle_names[flags] === 'Space rocket')
   {
-      this.image8 = [{
-          srcc: 'assets/images/rocket.PNG',
-      }]; 
+      this.image8 = [
+          'assets/images/rocket.PNG',
+      ]; 
   }
   else if(this.request.vehicle_names[flags] === 'Space shuttle')
   {
-      this.image8 = [{
-          srcc: 'assets/images/shuttle.PNG',
-      }]; 
+      this.image8 = [
+          'assets/images/shuttle.PNG',
+      ]; 
   }
   else if(this.request.vehicle_names[flags] === 'Space ship')
   {
-      this.image8 = [{
-          srcc: 'assets/images/ship.PNG',
-      }]; 
+      this.image8 = [
+           'assets/images/ship.PNG',
+      ]; 
   }
   }
 
@@ -176,27 +176,27 @@ export class GamePageComponent implements OnInit {
   {
   if(this.request.vehicle_names[flags] === 'Space pod')
   {
-    this.image9 = [{
-      srcc: 'assets/images/pod.PNG',
-    }];
+    this.image9 = [
+       'assets/images/pod.PNG',
+    ];
   }
   else if(this.request.vehicle_names[flags] === 'Space rocket')
   {
-      this.image9 = [{
-          srcc: 'assets/images/rocket.PNG',
-      }]; 
+      this.image9 = [
+           'assets/images/rocket.PNG',
+      ]; 
   }
   else if(this.request.vehicle_names[flags] === 'Space shuttle')
   {
-      this.image9 = [{
-          srcc: 'assets/images/shuttle.PNG',
-      }]; 
+      this.image9 = [
+          'assets/images/shuttle.PNG',
+      ]; 
   }
   else if(this.request.vehicle_names[flags] === 'Space ship')
   {
-      this.image9 = [{
-          srcc: 'assets/images/ship.PNG',
-      }]; 
+      this.image9 = [
+           'assets/images/ship.PNG',
+      ]; 
   }
   }
 

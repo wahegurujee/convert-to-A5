@@ -29,7 +29,7 @@
           <input [value]='rb.name' type="radio" name="radios" [disabled]="optionDisable(rb.total_no)" 
           (click)="captureValue(rb.name, 0, 6)" [(ngModel)]="radioSelected1"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <img [src]="image6[0].srcc">
+        <img [hidden]=!radioSelected1 [src]="image6[0]">
       </div>
     </div>
     <div class="col-lg-3 col-md-3 col sm-6">
@@ -61,7 +61,7 @@
           <input [value]='rb.name' type="radio" name="radio2" [disabled]="optionDisable(rb.total_no)" 
           (click)="captureValue(rb.name, 1, 7)" [(ngModel)]="radioSelected2"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <img [src]="image7[0].srcc">
+        <img [hidden]=!radioSelected2 [src]="image7[0]">
    
       </div>
     </div>
@@ -94,7 +94,7 @@
           <input [value]='rb.name' type="radio" name="radio3" [disabled]="optionDisable(rb.total_no)" 
           (click)="captureValue(rb.name, 2, 8)" [(ngModel)]="radioSelected3"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <img [src]="image8[0].srcc">
+        <img [hidden]=!radioSelected3 [src]="image8[0]">
       
       </div>
     </div>
@@ -127,7 +127,7 @@
           <input [value]='rb.name' type="radio" name="radio4" [disabled]="optionDisable(rb.total_no)"
           (click)="captureValue(rb.name, 3, 9)" [(ngModel)]="radioSelected4"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <img [src]="image9[0].srcc">
+        <img [hidden]=!radioSelected4 [src]="image9[0]">
      
       </div>
     </div>
