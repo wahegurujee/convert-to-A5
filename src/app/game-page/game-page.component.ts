@@ -2,16 +2,45 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { GamePageService } from '../game-page/game-page.service';
 import { Observable } from 'rxjs/Observable';
-
+import { trigger, state, style, animate, transition } from '@angular/animations';
+declare var jquery:any;
+declare var $ :any;
 
 
 @Component({
   selector: 'app-game-page',
   templateUrl: './game-page.component.html',
   styleUrls: ['./game-page.component.css'],
-  providers: [GamePageService]
+  providers: [GamePageService],
+  animations: [
+    trigger('photoState', [
+      state('hide', style({ transform: 'rotate(0)' })),
+      state('show', style({ transform: 'rotate(-360deg)' })),
+      transition('show => hide', animate('400ms ease-out')),
+      transition('hide => show', animate('400ms ease-in'))
+    ]),
+    trigger('photoState', [
+        state('hide', style({ transform: 'rotate(0)' })),
+        state('show', style({ transform: 'rotate(-360deg)' })),
+        transition('show => hide', animate('400ms ease-out')),
+        transition('hide => show', animate('400ms ease-in'))
+      ]),
+      trigger('photoState', [
+        state('hide', style({ transform: 'rotate(0)' })),
+        state('show', style({ transform: 'rotate(-360deg)' })),
+        transition('show => hide', animate('400ms ease-out')),
+        transition('hide => show', animate('400ms ease-in'))
+      ]),
+      trigger('photoState', [
+        state('hide', style({ transform: 'rotate(0)' })),
+        state('show', style({ transform: 'rotate(-360deg)' })),
+        transition('show => hide', animate('400ms ease-out')),
+        transition('hide => show', animate('400ms ease-in'))
+      ])
+  ]
 })
 export class GamePageComponent implements OnInit {
+    
   dropdown: any;
   vehicle: [any];
   //val:number;
@@ -21,7 +50,7 @@ export class GamePageComponent implements OnInit {
   image8:any = [];
   image9:any = [];
   token:any = {};
-  srcc:any = [];
+  
 
  
   donlon: any;
@@ -54,13 +83,46 @@ export class GamePageComponent implements OnInit {
     this.pingasor = '/assets/images/pingasor.PNG';
   
   }
-
+  show = false;
+ 
+ 
+  get stateName() {
+      return this.show ? 'show' : 'hide'
+    }
+    get stateName2() {
+        return this.show ? 'show' : 'hide'
+      }
+      get stateName3() {
+        return this.show ? 'show' : 'hide'
+      }
+      get stateName4() {
+        return this.show ? 'show' : 'hide'
+      }
+  
+  
+    toggle() {
+      this.show = !this.show;
+    }
+  
 
   ngOnInit() {
-   this.dropData(0);
-   
+   this.dropData(0);  
+
+   var angle = 0;
+setInterval(function(){
+      angle+=3;
+     $("#image1").rotate(angle);
+  },50);
    
   }
+  
+
+  // @Output()
+  // change: EventEmitter<object> = new EventEmitter<object>();
+  // updateCount = this.change.emit(this.request);
+  
+  
+
   checkDisability = function(item, flag) {
     switch (flag) {
       case 1:
@@ -86,7 +148,7 @@ export class GamePageComponent implements OnInit {
       obj.total_no = obj.name === val ? obj.total_no-1 : obj.total_no;
   });
   this.request.vehicle_names[flags] = val; 
-  console.log(this.request);
+ // console.log(this.request);
 
   if(dif === 6)
   {
@@ -174,6 +236,7 @@ export class GamePageComponent implements OnInit {
 
   if(dif === 9)
   {
+    
   if(this.request.vehicle_names[flags] === 'Space pod')
   {
     this.image9 = [
@@ -223,6 +286,18 @@ export class GamePageComponent implements OnInit {
       
     });
 
+
+    // changeGV(){
+    //   this.gamepageService.setMyGV(this.request);
+    //   console.log("called");
+  
+    // }
+    // showGV(){
+    //    this.GV = this.gamepageService.getMyGV();
+    //    console.log(this.GV);
+    //   }
+
+
     dropData(val) {
   
       this.gamepageService.getdropData().then(res => {
@@ -231,15 +306,31 @@ export class GamePageComponent implements OnInit {
 
       });
       if(val === 0){
+      
         this.request.planet_names[val] = this.selectedName1;
       }
       else if(val === 1){
+        var angle = 0;
+        setInterval(function(){
+              angle+=3;
+             $("#image2").rotate(angle);
+        },50);
         this.request.planet_names[val] = this.selectedName2;
       }
       else if(val === 2){
+        var angle = 0;
+        setInterval(function(){
+              angle+=3;
+             $("#image3").rotate(angle);
+        },50);
         this.request.planet_names[val] = this.selectedName3;
       }
       else if(val === 3){
+        var angle = 0;
+        setInterval(function(){
+              angle+=3;
+             $("#image4").rotate(angle);
+        },50);
         this.request.planet_names[val] = this.selectedName4;
       }
     

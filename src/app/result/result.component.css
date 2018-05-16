@@ -1,0 +1,15 @@
+.text{
+    text-align: center;
+}
+#text{
+    text-align: center;
+}
+.center{
+    position: relative;
+    left: 500px;
+}
+span{
+    color: greenyellow;
+    font-size: 35px;
+
+}

@@ -3,133 +3,146 @@
     <div class="col-lg-3 col-md-3 col sm-6">
       <h4>Destination 1</h4>
       <div *ngIf="selectedName1 === 'Donlon'">
-        <img class="drop_first" [src]='donlon' />
+        <img class="drop_first" [src]='donlon' id="image1" />
       </div>
       <div *ngIf="selectedName1 === 'Enchai'">
-        <img class="drop_first" [src]='enchai' />
+        <img class="drop_first" [src]='enchai' id="image1" />
       </div>
       <div *ngIf="selectedName1 === 'Jebing'">
-        <img class="drop_first" [src]='jebing' />
+        <img class="drop_first" [src]='jebing' id="image1" />
       </div>
       <div *ngIf="selectedName1 === 'Sapir'">
-        <img class="drop_first" [src]='sapir' />
+        <img class="drop_first" [src]='sapir' id="image1" />
       </div>
       <div *ngIf="selectedName1 === 'Lerbin'">
-        <img class="drop_first" [src]='lerbin' />
+        <img class="drop_first" [src]='lerbin' id="image1" />
       </div>
       <div *ngIf="selectedName1 === 'Pingasor'">
-        <img class="drop_first" [src]='pingasor' />
+        <img class="drop_first" [src]='pingasor' id="image1" />
       </div>
       <select class="one" [(ngModel)]="selectedName1" (change)="dropData(0)">
         <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 1)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
       <div *ngIf="selectedName1">
-        <div *ngFor="let rb of vehicle">
+        <div class="radio_opt" *ngFor="let rb of vehicle" tooltip="My Tooltip" >
           <input [value]='rb.name' type="radio" name="radios" [disabled]="optionDisable(rb.total_no)" 
           (click)="captureValue(rb.name, 0, 6)" [(ngModel)]="radioSelected1"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <img [hidden]=!radioSelected1 [src]="image6[0]">
+        <div class="first" [@photoState]="stateName">
+            <img [hidden]=!radioSelected1 [src]="image6[0]" (mouseenter)="toggle()">
+          </div>
+        <!-- <img [hidden]=!radioSelected1 [src]="image6[0]"> -->
       </div>
     </div>
     <div class="col-lg-3 col-md-3 col sm-6">
       <h4>Destination 2</h4>
       <div *ngIf="selectedName2 === 'Donlon'">
-        <img class="drop_first" [src]='donlon' />
+        <img class="drop_first" [src]='donlon' id="image2" />
       </div>
       <div *ngIf="selectedName2 === 'Enchai'">
-        <img class="drop_first" [src]='enchai' />
+        <img class="drop_first" [src]='enchai' id="image2" />
       </div>
       <div *ngIf="selectedName2 === 'Jebing'">
-        <img class="drop_first" [src]='jebing' />
+        <img class="drop_first" [src]='jebing' id="image2" />
       </div>
       <div *ngIf="selectedName2 === 'Sapir'">
-        <img class="drop_first" [src]='sapir' />
+        <img class="drop_first" [src]='sapir' id="image2" />
       </div>
       <div *ngIf="selectedName2 === 'Lerbin'">
-        <img class="drop_first" [src]='lerbin' />
+        <img class="drop_first" [src]='lerbin' id="image2" />
       </div>
       <div *ngIf="selectedName2 === 'Pingasor'">
-        <img class="drop_first" [src]='pingasor' />
+        <img class="drop_first" [src]='pingasor' id="image2" />
       </div>
       <select class="one" [(ngModel)]="selectedName2" (change)="dropData(1)">
         <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 2)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
       <div *ngIf="selectedName2">
-        <div *ngFor="let rb of vehicle">
+        <div class="radio_opt" *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radio2" [disabled]="optionDisable(rb.total_no)" 
           (click)="captureValue(rb.name, 1, 7)" [(ngModel)]="radioSelected2"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <img [hidden]=!radioSelected2 [src]="image7[0]">
+        <!-- <img [hidden]=!radioSelected2 [src]="image7[0]"> -->
+        <div class="first" [@photoState]="stateName2">
+            <img [hidden]=!radioSelected2 [src]="image7[0]" (mouseenter)="toggle()">
+          </div>
    
       </div>
     </div>
     <div class="col-lg-3 col-md-3 col sm-6">
       <h4>Destination 3</h4>
       <div *ngIf="selectedName3 === 'Donlon'">
-        <img class="drop_first" [src]='donlon' />
+        <img class="drop_first" [src]='donlon' id="image3" />
       </div>
       <div *ngIf="selectedName3 === 'Enchai'">
-        <img class="drop_first" [src]='enchai' />
+        <img class="drop_first" [src]='enchai' id="image3" />
       </div>
       <div *ngIf="selectedName3 === 'Jebing'">
-        <img class="drop_first" [src]='jebing' />
+        <img class="drop_first" [src]='jebing' id="image3" />
       </div>
       <div *ngIf="selectedName3 === 'Sapir'">
-        <img class="drop_first" [src]='sapir' />
+        <img class="drop_first" [src]='sapir' id="image3" />
       </div>
       <div *ngIf="selectedName3 === 'Lerbin'">
-        <img class="drop_first" [src]='lerbin' />
+        <img class="drop_first" [src]='lerbin' id="image3" />
       </div>
       <div *ngIf="selectedName3 === 'Pingasor'">
-        <img class="drop_first" [src]='pingasor' />
+        <img class="drop_first" [src]='pingasor' id="image3" />
       </div>
       <select class="one" [(ngModel)]="selectedName3" (change)="dropData(2)">
         <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 3)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
       <div *ngIf="selectedName3">
-        <div *ngFor="let rb of vehicle">
+        <div class="radio_opt" *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radio3" [disabled]="optionDisable(rb.total_no)" 
           (click)="captureValue(rb.name, 2, 8)" [(ngModel)]="radioSelected3"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <img [hidden]=!radioSelected3 [src]="image8[0]">
+        <!-- <img [hidden]=!radioSelected3 [src]="image8[0]"> -->
+        <div class="first" [@photoState]="stateName3">
+            <img [hidden]=!radioSelected3 [src]="image8[0]" (mouseenter)="toggle()">
+          </div>
       
       </div>
     </div>
     <div class="col-lg-3 col-md-3 col sm-6">
       <h4>Destination 4</h4>
       <div *ngIf="selectedName4 === 'Donlon'">
-        <img class="drop_first" [src]='donlon' />
+        <img class="drop_first" [src]='donlon' id="image4" />
       </div>
       <div *ngIf="selectedName4 === 'Enchai'">
-        <img class="drop_first" [src]='enchai' />
+        <img class="drop_first" [src]='enchai' id="image4" />
       </div>
       <div *ngIf="selectedName4 === 'Jebing'">
-        <img class="drop_first" [src]='jebing' />
+        <img class="drop_first" [src]='jebing' id="image4" />
       </div>
       <div *ngIf="selectedName4 === 'Sapir'">
-        <img class="drop_first" [src]='sapir' />
+        <img class="drop_first" [src]='sapir' id="image4" />
       </div>
       <div *ngIf="selectedName4 === 'Lerbin'">
-        <img class="drop_first" [src]='lerbin' />
+        <img class="drop_first" [src]='lerbin' id="image4" />
       </div>
       <div *ngIf="selectedName4 === 'Pingasor'">
-        <img class="drop_first" [src]='pingasor' />
+        <img class="drop_first" [src]='pingasor' id="image4" />
       </div>
       <select class="one" [(ngModel)]="selectedName4" (change)="dropData(3)">
         <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 4)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
       <div *ngIf="selectedName4">
-        <div *ngFor="let rb of vehicle">
+        <div class="radio_opt" *ngFor="let rb of vehicle">
           <input [value]='rb.name' type="radio" name="radio4" [disabled]="optionDisable(rb.total_no)"
           (click)="captureValue(rb.name, 3, 9)" [(ngModel)]="radioSelected4"> {{rb.name}} ({{rb.total_no}})
         </div>
-        <img [hidden]=!radioSelected4 [src]="image9[0]">
+        <!-- <img [hidden]=!radioSelected4 [src]="image9[0]"> -->
+        <div class="first" [@photoState]="stateName4">
+            <img [hidden]=!radioSelected4 [src]="image9[0]" (mouseenter)="toggle()">
+          </div>
      
       </div>
     </div>
   </div>
+
 </div>

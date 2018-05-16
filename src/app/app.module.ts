@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { GamePageComponent } from './game-page/game-page.component';
 import { ResultComponent } from './result/result.component';
 import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -21,9 +22,10 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  providers:[AppService],
+  providers:[AppService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

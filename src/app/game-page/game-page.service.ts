@@ -8,7 +8,7 @@ public baseURL = 'https://findfalcone.herokuapp.com/planets';
 public baseURLL = 'https://findfalcone.herokuapp.com/vehicles';
 public tokenURL = 'https://findfalcone.herokuapp.com/token';
 public resultURL = 'https://findfalcone.herokuapp.com/find';
-
+myGlobalVar:any;
 
 public httpOptions = {
     headers: new HttpHeaders({
@@ -58,7 +58,14 @@ public httpOption = {
     });    
   }
 
+  // setMyGV(val: object){
+  //   this.myGlobalVar = val;
+  //   console.log(this.myGlobalVar);
+  // }
 
+  // getMyGV():object{
+  //   return this.myGlobalVar;
+  // }
 
 
 }

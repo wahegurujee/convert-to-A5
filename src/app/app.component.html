@@ -1,18 +1,49 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark pull-down">
-  <a class="navbar-brand" routerLink="">
-    <img src="assets/images/logo.jpg" alt="Geek-logo" style="width:150px; height:50px;"/>
-  </a>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <a routerLink="Result" class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="find()">Find Falcone</a>
-    </form>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <form class="form-inline my-2 my-lg-0">
-      <a routerLink="GamePage" class="btn btn-outline-danger my-2 my-sm-0" type="button" (click)="reset()">Reset</a>
-    </form>
-  </div>
+<a class="navbar-brand" routerLink="">
+<img src="assets/images/icon.jpg" alt="Geek-logo" style="width:150px; height:50px;"/>
+</a>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto">
+</ul>
+<form class="form-inline my-2 my-lg-0">
+    <a routerLink="Result" class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="find()">Find Falcone</a>
+</form>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<form class="form-inline my-2 my-lg-0">
+    <a routerLink="GamePage" class="btn btn-outline-danger my-2 my-sm-0" type="button" (click)="reset()">Reset</a>
+</form>
+</div>
 </nav>
 <router-outlet></router-outlet>
-<!-- <app-result [RESULT]= result></app-result> -->
+<!-- <div (change)="updateFromChild($event)"></div> -->
+
+<footer class="fixed-bottom page-footer font-small blue-grey lighten-5 pt-0">
+<div style="background-color: black;">
+<div class="change-col container">
+<div class=" row py-4 d-flex align-items-center">
+<div class="col-12 col-md-5 text-left mb-4 mb-md-0">
+<h6 class="mb-0 white-text text-center text-md-left">
+<strong>Get connected with us on social networks!</strong>
+</h6>
+</div>
+<div class="col-12 col-md-7 text-center text-md-right">
+<a class="fb-ic ml-0">
+<i class="fa fa-facebook white-text mr-lg-4"> </i>
+</a>
+<a class="tw-ic">
+<i class="fa fa-twitter white-text mr-lg-4"> </i>
+</a>
+<a class="gplus-ic">
+<i class="fa fa-google-plus white-text mr-lg-4"> </i>
+</a>
+<a class="li-ic">
+<i class="fa fa-linkedin white-text mr-lg-4"> </i>
+</a>
+<a class="ins-ic">
+<i class="fa fa-instagram white-text mr-lg-4"> </i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer> 

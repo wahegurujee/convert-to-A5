@@ -8,7 +8,8 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
-  styleUrls: ['./result.component.css']
+  styleUrls: ['./result.component.css'],
+  providers: [AppService]
 })
 export class ResultComponent implements OnInit {
   result:any = {};
@@ -18,12 +19,9 @@ export class ResultComponent implements OnInit {
    }
    
   ngOnInit() {
-    
+   
     this.appService.getResult().then(res => {
       this.result = res;
-      //this.value = JSON.stringify(res);
-      //this.result = this.value.split(" ")[0];
-    // console.log(this.result);
     }, err => {
       
     });

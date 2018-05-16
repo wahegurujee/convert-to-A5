@@ -17,8 +17,10 @@ export class AppService {
 
   getResult(): Promise<any> {
     return new Promise((resolve: any, reject: any) => {
-      this.http.post(this.resultURL, { 
-        "token": "VFzoZTBhPhVLCRucBYnOixHfQGQCBHdJ",
+      this.http.post(this.resultURL, 
+      // { result: result}
+        { 
+        "token": "PWiblQRxghShZPgnfNBxwDCoYJYCnbzC",
         "planet_names": [
                 "Donlon",
                 "Enchai",
@@ -31,7 +33,8 @@ export class AppService {
                 "Space shuttle",
                 "Space pod"
                 ]
-      }, this.httpOption).subscribe( response => {
+      }
+      , this.httpOption).subscribe( response => {
        // console.log(response);
         resolve(response);
       }, error => {
