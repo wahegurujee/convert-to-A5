@@ -9,8 +9,7 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     CommonModule,
     RouterModule,
-    AppRoutingModule
-   
+    AppRoutingModule 
   ],
   declarations: [
     GamePageComponent,

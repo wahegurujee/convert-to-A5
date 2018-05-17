@@ -50,7 +50,12 @@ export class GamePageComponent implements OnInit {
   image8:any = [];
   image9:any = [];
   token:any = {};
-  
+  set_val:any;
+  bool:any;
+  positive = true;
+  positive2 = true;
+  positive3 = true;
+ 
 
  
   donlon: any;
@@ -112,10 +117,18 @@ export class GamePageComponent implements OnInit {
 setInterval(function(){
       angle+=3;
      $("#image1").rotate(angle);
-  },50);
-   
+  }, 50);
   }
-  
+
+  fill() {
+    return this.set_val = this.positive;
+  }
+  fill1(){
+    return this.set_val = this.positive2;
+  } 
+  fill2(){
+    return this.set_val = this.positive3;
+  }
 
   // @Output()
   // change: EventEmitter<object> = new EventEmitter<object>();
@@ -152,6 +165,8 @@ setInterval(function(){
 
   if(dif === 6)
   {
+    
+   
   if(this.request.vehicle_names[flags] === 'Space pod')
   {
     this.image6 = [
@@ -176,6 +191,9 @@ setInterval(function(){
           'assets/images/ship.PNG',
       ]; 
   }
+
+  this.positive = false;
+  this.set_val = this.positive;
   }
 
   if(dif === 7)
@@ -204,6 +222,8 @@ setInterval(function(){
           'assets/images/ship.PNG',
       ]; 
   }
+  this.positive2 = false;
+  this.set_val = this.positive2;
   }
 
   if(dif === 8)
@@ -232,6 +252,8 @@ setInterval(function(){
            'assets/images/ship.PNG',
       ]; 
   }
+  this.positive3 = false;
+  this.set_val = this.positive3;
   }
 
   if(dif === 9)

@@ -17,22 +17,23 @@ export class AppService {
 
   getResult(): Promise<any> {
     return new Promise((resolve: any, reject: any) => {
-      this.http.post(this.resultURL, 
+      this.http.post(this.resultURL,
       // { result: result}
-        { 
-        "token": "ukpKIzXYjIKSQjkujfPLXoyJviPamFYp",
-        "planet_names": [
-                "Donlon",
-                "Enchai",
-                "Sapir",
-                "Lerbin"
-                ],
-        "vehicle_names": [
-                "Space pod",
-                "Space rocket",
-                "Space shuttle",
-                "Space pod"
-                ]
+        {
+          "token": "slDScfPMzFQNCHhYFyplwclMQDwrFveM",
+          "planet_names": [
+                  "Donlon",
+                  "Enchai",
+                  "jebing",
+                  "Sapir"
+                  
+                  ],
+          "vehicle_names": [
+                  "Space pod",
+                  "Space rocket",
+                  "Space shuttle",
+                  "Space pod"
+                  ]
       }
       , this.httpOption).subscribe( response => {
        // console.log(response);
@@ -40,7 +41,7 @@ export class AppService {
       }, error => {
         reject(error);
       });
-    });    
+    });
   }
 
 }
