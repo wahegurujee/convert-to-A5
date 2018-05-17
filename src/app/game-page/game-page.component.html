@@ -21,6 +21,7 @@
         <img class="drop_first" [src]='pingasor' id="image1" />
       </div>
       <select class="one" [(ngModel)]="selectedName1" (change)="dropData(0)">
+        <option value="" [selected]=true [disabled]=true [hidden]=true>Choose a Country</option>
         <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 1)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
@@ -56,6 +57,7 @@
         <img class="drop_first" [src]='pingasor' id="image2" />
       </div>
       <select class="one" [(ngModel)]="selectedName2" (change)="dropData(1)">
+          <option value="" [selected]=true [disabled]=true [hidden]=true>Choose a Country</option>
         <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 2)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
@@ -92,6 +94,7 @@
         <img class="drop_first" [src]='pingasor' id="image3" />
       </div>
       <select class="one" [(ngModel)]="selectedName3" (change)="dropData(2)">
+          <option value="" [selected]=true [disabled]=true [hidden]=true>Choose a Country</option>
         <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 3)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>
@@ -128,6 +131,7 @@
         <img class="drop_first" [src]='pingasor' id="image4" />
       </div>
       <select class="one" [(ngModel)]="selectedName4" (change)="dropData(3)">
+          <option value="" [selected]=true [disabled]=true [hidden]=true>Choose Country</option>
         <option *ngFor="let item of dropdown" [hidden]="checkDisability(item.name, 4)" value="{{item.name}}">{{item.name}}</option>
       </select>
       <br/>

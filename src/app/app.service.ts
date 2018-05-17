@@ -20,7 +20,7 @@ export class AppService {
       this.http.post(this.resultURL, 
       // { result: result}
         { 
-        "token": "PWiblQRxghShZPgnfNBxwDCoYJYCnbzC",
+        "token": "ukpKIzXYjIKSQjkujfPLXoyJviPamFYp",
         "planet_names": [
                 "Donlon",
                 "Enchai",

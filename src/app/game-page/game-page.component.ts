@@ -63,10 +63,10 @@ export class GamePageComponent implements OnInit {
   rocket: any;
   ship: any;
   shuttle: any;
-  selectedName1: any;
-  selectedName2: any;
-  selectedName3: any;
-  selectedName4: any;
+  selectedName1: any ="";
+  selectedName2: any ="";
+  selectedName3: any ="";
+  selectedName4: any ="";
   request = {
     token:{},
     planet_names:[],
@@ -332,6 +332,8 @@ setInterval(function(){
              $("#image4").rotate(angle);
         },50);
         this.request.planet_names[val] = this.selectedName4;
+
+      
       }
     
     }

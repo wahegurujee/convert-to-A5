@@ -22,9 +22,9 @@ dropdown:any;
 set_val:any;
 
 
-reset = function () {
-  this.reset();
-}
+// reset = function () {
+//   this.reset();
+// }
 
 showGV(){
   // this.gamepageService.getdropData().then(res => {

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 
 
 
+
 @Component({
   selector: 'app-result',
   templateUrl: './result.component.html',
