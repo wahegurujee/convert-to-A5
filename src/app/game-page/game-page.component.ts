@@ -55,6 +55,7 @@ export class GamePageComponent implements OnInit {
   positive = true;
   positive2 = true;
   positive3 = true;
+  find = true;
  
 
  
@@ -131,8 +132,8 @@ setInterval(function(){
   }
 
   // @Output()
-  // change: EventEmitter<object> = new EventEmitter<object>();
-  // updateCount = this.change.emit(this.request);
+  // change: EventEmitter<boolean> = new EventEmitter<boolean>();
+  // updateCount = this.change.emit(this.find);
   
   
 
@@ -161,7 +162,7 @@ setInterval(function(){
       obj.total_no = obj.name === val ? obj.total_no-1 : obj.total_no;
   });
   this.request.vehicle_names[flags] = val; 
- // console.log(this.request);
+  console.log(this.request);
 
   if(dif === 6)
   {

@@ -1,11 +1,14 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { GamePageService } from './game-page.service';
+import { HttpClient,HttpHandler } from '@angular/common/http';
+
+
 
 describe('GamePageService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [GamePageService]
+      providers: [GamePageService, HttpClient,HttpHandler]
     });
   });
 

@@ -26,7 +26,7 @@ set_val:any;
 //   this.reset();
 // }
 
-showGV(){
+
   // this.gamepageService.getdropData().then(res => {
   //   this.dropdown = res;
   //   console.log("In app");
@@ -34,17 +34,8 @@ showGV(){
   // }, err => {
 
   // });
-//  this.GV = this.gamepageService.getMyGV();
-//  console.log(this.GV);
- //alert("GV: " + this.gamepageService.getMyGV());
-
-}
-// fill(){
-// return this.set_val = false;
-
-// }
-
-
+// @Input()
+// updateCount
 // updateFromChild(event){
 //  // this.request;
 //   console.log(event);
